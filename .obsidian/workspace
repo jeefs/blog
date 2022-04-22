@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 288
   },
   "right": {
     "id": "0045cc41d29cadf5",
@@ -90,7 +90,8 @@
   "active": "16cd6ee74994d992",
   "lastOpenFiles": [
     "README.md",
+    "().md",
     "codeNotes/multi-git.md",
-    "().md"
+    "bookNotes/uploading-files-asynchronously-using-qiniu.md"
   ]
 }
