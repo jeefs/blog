@@ -12,8 +12,8 @@
 	
 
 <h3 id="2">2.ssh-key配置</h3>
-1.`cd ~/.ssh` 在本地 .ssh目录下创建一个config文件 `touch config`
-2.`vim config` 打开文件添加如下内容:
+1.在本地 .ssh目录下创建一个config文件下执行 `cd ~/.ssh 和touch config`
+2. 执行`vim config`打开文件添加如下内容:
 
 ```
 //账号a
