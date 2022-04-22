@@ -46,9 +46,19 @@ IdentityFile  C:\Users\mike\.ssh\id_rsa_person // 私钥文件路径，此目录
 执行 `ssg -T git@ssh-work `  返回welcome信息则配置成功
 
 <h3 id="4">4.多账号切换</h3>
-首先在需要使用个人git账户的目录，配置git config --global user.name "your_username"，git config --global user.email "your_registered_github_Email" ，此配置为局部配置
+首先在需要使用个人git账户的目录，配置
 
-在需要使用公司git账户的目录，配置git config --global user.name "your_username"，git config --global user.email "your_registered_github_Email" ，此配置为局部配置
+```
+git config --global user.name "your_username"，
+git config --global user.email "your_registered_github_Email" //此配置为局部配置
+```
+
+在需要使用公司git账户的目录，配置
+```
+git config --global user.name "your_username"
+git config --global user.email "your_registered_github_Email" //此配置为局部配置
+```
+
 
 1.拉取个人仓库项目，从仓库中复制链接 如 git@github.com:jeefs/blog.git 
 替换成   `git clone git@ssh-person:jeefs/blog.git`
