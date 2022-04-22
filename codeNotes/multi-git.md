@@ -57,6 +57,8 @@ IdentityFile  C:\Users\mike\.ssh\id_rsa_person // 私钥文件路径，此目录
 通过上述配置，可以在不同的目录使用不同的git账号，他们彼此之间隔离
 
 也可以关联本地已经存在的项目
+```
 git remote add origin git@ssh-work:用户名/项目名.git 
 git remote add origin git@ssh-person:用户名/项目名.git
 ```
+
