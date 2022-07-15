@@ -1,5 +1,5 @@
 ### 开发笔记
-- 2022/4/22 [工作区支持多Git仓库](https://github.com/jeefs/blog/blob/0ea0077e00a30917aa16ebe47e0d9c82be5ef361/codeNotes/multi-git.md)
+- 2022/4/22 [工作区支持多Git仓库](https://github.com/jeefs/blog/blob/d9cee1863bcc188656ce7d79eb33f252b83bd791/codeNotes/multi-git.md)
 - 2022/4/23 [go-machinery任务队列入门教程]()todo
 - 2022/4/23 [七牛云对象存储sdk入门教程]() todo
 - 2022/4/24 [七牛云图片异步上传方案](https://github.com/jeefs/blog/blob/a10f7afe398fca1e796925f4f36af1f4d17d2b50/bookNotes/uploading-files-asynchronously-using-qiniu.txt) todo
