@@ -12,7 +12,7 @@
 - 2022/4/27 [Go专家编程]()todo
 - 2022/4/28 [SQL必知必会]()todo
 ### Golang
-- [内部包(Internal)]()
+- [内部包(Internal)](https://github.com/jeefs/blog/blob/d87066e57c54ff732747fcb9756abb318ffe42cd/codeNotes/internal-package)
 ### 业务技能
 - 缓存设计
 - 数据库表设计及优化
