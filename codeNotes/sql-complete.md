@@ -18,3 +18,7 @@ select * from cgm_glucose_2108 where mac = 'D6:23:17:79:DA:95' and (currentWarni
 
 # 批量插入数据
 
+
+# 批量生成修改表字段sql
+select CONCAT('ALTER TABLE crmv1.',table_name,' ADD client_create_time BIGINT NULL COMMENT',' \'客户端数据创建时间\'; ')  
+from information_schema.tables where TABLE_NAME  like "cgm_glucose_%" and TABLE_SCHEMA  = "crmv1"
