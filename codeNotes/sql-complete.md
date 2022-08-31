@@ -29,3 +29,21 @@ from information_schema.tables where TABLE_NAME  like "cgm_glucose_%" and TABLE_
 select CONCAT('ALTER TABLE crmv1.',table_name,' DROP COLUMN deleted_at;')  
 from (select count(*)  as columns_existed,TABLE_NAME from information_schema.`COLUMNS` where TABLE_NAME  like "cgm_glucose_%"  
 and COLUMN_NAME = "deleted_at" group by TABLE_NAME ) as tmp
+
+#存储过程判断表是否存在，不存在新增
+CREATE PROCEDURE `add_col_homework`()-- 新增一个存储过程
+BEGIN
+
+IF not EXISTS (SELECT column_name FROM information_schema.columns WHERE table_name = 'ot_user' and column_name = 'sfzzh')
+-- 判断是否存在字段
+THEN
+-- 不存在则新增字段
+   ALTER TABLE ot_stamp ADD COLUMN `sfzzh` int(10);
+
+END IF; 
+
+END;
+
+call add_col_homework();-- 运行该存储过程
+
+drop PROCEDURE add_col_homework; -- 删除该存储过程
