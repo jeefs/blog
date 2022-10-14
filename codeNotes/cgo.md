@@ -50,6 +50,8 @@ package main
 但是在-l参数后只需要指定 hello即可，前缀lib和后缀.a可以省略,如果hello里面还依赖了其他头文件，需要重复步骤1编译成静态库，并在此引入
 */
 ```
+#### 4.编译go
+当引入了C头文件后，不能使用go run 来编译，需使用go build . 会自动将C头文件包含进来
 
-#### 4.cgo和go一些基础类型转换
+#### 5.cgo和go一些基础类型转换
 参考 1.https://chai2010.cn/advanced-go-programming-book/ch2-cgo/ch2-03-cgo-types.html
