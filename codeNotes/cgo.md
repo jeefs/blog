@@ -46,6 +46,6 @@ package main
 #include <stdio.h>
 #include <stdlib.h>
 #cgo CFLAGS: -I./lib //指定头文件目录 
-#cgo LDFLAGS: -L./lib -lhello -L./Lib2 -l2 //指定要链接的静态库目录，及库名称，注意，虽然静态库名称为libhello.a 但是在-l参数后只需要制定 hello即可，前缀lib和后缀.a可以省略,如果hello里面还依赖了其他头文件，需要重复步骤1编译成静态库，并在此引入
+#cgo LDFLAGS: -L./lib -lhello -L./Lib2 -l2 //指定要链接的静态库目录，及库名称，注意，虽然静态库名称为libhello.a 但是在-l参数后只需要指定 hello即可，前缀lib和后缀.a可以省略,如果hello里面还依赖了其他头文件，需要重复步骤1编译成静态库，并在此引入
 */
 ```
