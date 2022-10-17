@@ -1,5 +1,5 @@
 ```
-	jsonStr := "{k:v,k:v},{k:v,k:v}..."	
+	jsonStr := "{k:v,k:v},{k:v,k:v}..." //get single {}
 	var l, r int
 	for i := 0; i < len(jsonStr); i++ {
 		if jsonStr[i] == 123 {
