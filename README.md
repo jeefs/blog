@@ -6,6 +6,8 @@
 - 2022/4/25 [数据库存储树形结构]() todo
 - 2022/4/26 [递归打印多级分层结构]() todo
 - 2022/10/14 [cgo调用c](./codeNotes/cgo.md)
+- 2022/10/17 [go使用正则匹配](./codeNotes/go-use-regxp.md)
+- 2022/10/17 [简单的提取json花括号部分](./codeNotes/split-jsonStr.md)
 
 ### 读书笔记
 - 2022/4/25 [代码整洁之道]()todo
