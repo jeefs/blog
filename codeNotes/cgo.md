@@ -55,3 +55,54 @@ package main
 
 #### 5.cgo和go一些基础类型转换
 参考 1.https://chai2010.cn/advanced-go-programming-book/ch2-cgo/ch2-03-cgo-types.html
+
+```  int
+#### go to c
+var i int
+ci := C.int(i)
+
+#### c to go
+var i C.int
+goi := int(i)
+
+```
+
+``` string
+#### go to c
+var str string
+cstr := C.CString(str)
+
+#### c to go
+/*
+#include <stdlib.h>
+#include <stdio.h>
+char foo[] = "hellofoo";
+char *bar = "hellobar";
+*/
+import "C"
+import "fmt"
+
+func main() {
+    fmt.Printf("%s\n", C.GoString(&C.foo[0]))
+    fmt.Printf("%s\n", C.GoString(C.bar))
+}
+```
+
+``` arry
+#### c to go 
+/*
+#include <stdio.h>
+int cIArray[] = {1, 2, 3, 4, 5, 6, 7};
+float cFArray[] = {1.011, 2.022, 3.022, 4.023, 5.02, 6.03, 7.045};
+*/
+import "C"
+import "fmt"
+
+func main() {
+    goIArray := C.cIArray[:]
+    fmt.Println(goIArray)
+    goFArray := C.cFArray[:]
+    fmt.Println(goFArray)
+}
+
+```
