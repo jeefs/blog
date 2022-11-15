@@ -15,8 +15,6 @@
 - 2022/4/26 [敏捷软件开发]()todo
 - 2022/4/27 [Go专家编程]()todo
 - 2022/4/28 [SQL必知必会]()todo
-### Golang
-- [内部包(Internal)](./codeNotes/internal-package.md)
 ### 业务技能
 - 缓存设计
 - 数据库表设计及优化
@@ -24,7 +22,7 @@
 
 ### 核心知识
 - 常用算法与数据结构
-  - 数组
+  - [数组](./coreKownledge/algo/array.md)
   - 链表
   - 哈希表
   - 队列
@@ -32,7 +30,7 @@
   - 树
   - 堆
   - 图
-- 编程语法及原理
+- go编程语法及原理
   - map
   - slice
   - array
