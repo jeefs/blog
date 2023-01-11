@@ -35,7 +35,7 @@
 - go编程语法及原理
   - map
   - [slice](./coreKownledge/golang/slice.md)
-  - array
+  - [array](./coreKownledge/golang/array.md)
   - goroutine
   - lock
 - 操作系统基础知识
