@@ -41,5 +41,5 @@ func main() {
 切片扩容规律为:当追加元素时容量超出当前切片最大容量，当前的元素长度小于1024,扩展为当前容量的2倍，当大于1024时会进行内存对齐，扩容后的容量 >= 原容量的 2 倍或 1.25 倍
 
 参考:
-<https://www.cnblogs.com/qcrao-2018/p/10631989.html>
-<http://liupzmin.com/2020/07/16/golang/three-index-slice>
+- <https://www.cnblogs.com/qcrao-2018/p/10631989.html>
+- <http://liupzmin.com/2020/07/16/golang/three-index-slice>
