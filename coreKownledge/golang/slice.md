@@ -1,7 +1,8 @@
 ### slice的初始化
-var s1 []int //nil切片，s1 == nil 返回true,len为0,cap为0,底层数组指针不指向任何地址
+```
+var s1 []int //nil切片，s1 == nil 返回true,len为0,cap为0,底层数组指针不指向任何地址,官方建议使用此方式
 s1 := []int{} //空切片，s1 == nil返回false,len为0,cap为0,底层数组指针指向一个地址
-//官方建议使用方式1
+```
 
 ### slice的底层结构
 ```
