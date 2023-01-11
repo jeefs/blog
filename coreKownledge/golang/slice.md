@@ -15,7 +15,7 @@ type slice struct {
 
 切片是一个结构体，有3个元素，分别是保存数组地址的指针，切片长度，切片容量,由于切片底层共享一个数组，可能会出现操作一个切片而影响到其他切片的情况发生
 
-###切片元素覆盖及扩容
+### 切片元素覆盖及扩容
 
 很经典一例子，引用自《Go学习笔记》第四版
 ```
@@ -41,5 +41,5 @@ func main() {
 切片扩容规律为:当追加元素时容量超出当前切片最大容量，当前的元素长度小于1024,扩展为当前容量的2倍，当大于1024时会进行内存对齐，扩容后的容量 >= 原容量的 2 倍或 1.25 倍
 
 参考:
-[](https://www.cnblogs.com/qcrao-2018/p/10631989.html)
-[](http://liupzmin.com/2020/07/16/golang/three-index-slice)
+<https://www.cnblogs.com/qcrao-2018/p/10631989.html>
+<http://liupzmin.com/2020/07/16/golang/three-index-slice>
