@@ -64,7 +64,13 @@ ci := C.int(i)
 #### c to go
 var i C.int
 goi := int(i)
+```
 
+``` go float32 to c float *p1指针
+ c函数定义： int foo(float *p1);
+ go调用
+ var res float32
+ C.foo((*C.float)(unsafe.Pointer(&res))
 ```
 
 ``` string
