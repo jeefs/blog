@@ -10,6 +10,11 @@
 - [简单的提取json花括号部分](./codeNotes/split-jsonStr.md)
 - [开放接口签名](./codeNotes/open-api-sign.md)
 
+### 中间件
+- MySql
+- Redis
+- taskqueue
+
 ### 读书笔记
 - [代码整洁之道]()todo
 - [敏捷软件开发]()todo
