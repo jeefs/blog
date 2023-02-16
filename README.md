@@ -10,7 +10,7 @@
 - [简单的提取json花括号部分](./codeNotes/split-jsonStr.md)
 - [开放接口签名](./codeNotes/open-api-sign.md)
 - [ubuntu server 20.04 lts 安装docker](./codeNotes/install-docker.md)
-- [nsq简单认识](./codeNotes/nsq.md)
+- [nsq简单认识](./codeNotes/nsq-beginning.md)
 
 ### 中间件
 - MySql
