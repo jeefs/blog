@@ -1,0 +1,29 @@
+### 消息队列的常见使用场景
+- 异步处理：耗时业务场景，避免客户端超时，提高系统吞吐量
+- 应用解耦：不同业务之间通过消息队列交互，减少耦合
+- 流量削锋：流量过大的场景，先写入队列，队列满后，后续请求抛弃，保证服务稳定性
+- 日志处理：日志写入队列，日志消费者通过订阅的方式取出日志处理
+
+### 消息队列的两种模式
+- 点对点[Queue]
+- 发布/订阅[Topic]
+
+1.点对点：消息发送到队列中，只能被一个消费者消费，消费者不会消费到重复的消息
+
+2.发布/订阅: 消息发送到队列中，可以被多个消费者订阅
+
+3.分组订阅: 消息发送到topic中，多个消费者组成订阅组订阅queue
+
+### nsq 架构图
+![](https://github.com/liangjfblue/liangjfblue.github.io/blob/master/img/post_nsq_jaigou.png?raw=true)
+
+
+
+
+
+
+
+资料引用
+- https://developer.aliyun.com/article/681466
+- https://cloud.tencent.com/developer/article/1558847
+- https://nsq.io/overview/design.html
