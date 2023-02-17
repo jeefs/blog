@@ -34,30 +34,37 @@ func main() {
 
 2.多个子协程读写变量
 一般情况下，多个协程共享读写数据会出现数据竞争，为了避免这种情况可以使用sync.Map来保证线程安全
-```
+``` go
 package main
 
 import (
-  "sync"
-  "fmt"
+	"fmt"
+	"sync"
 )
 
 func main() {
-   var gData sync.Map
-   chs :=  []chan int8{make(chan int8,1),make(chan int8,1)}
-   for k,ch := range chs {
-	go func(ch chan<- int8) {
-		defer close(ch)
-		index := k+1
-		gData.Store(index,strct{})
-		ch<-index
-        }(ch)
-   }
-   
-   
-   
- 
- 
-  
+	defer func() {
+		fmt.Println("主协程执行完毕\n")
+	}()
+	var gData sync.Map
+	chs := []chan int{make(chan int, 1), make(chan int, 1)}
+	for k, ch := range chs {
+		index := k + 1
+		go func(ch chan<- int) {
+			fmt.Printf("子协程%v开始执行\n", index)
+			defer close(ch)
+			gData.Store(index, struct{}{})
+			ch <- index
+			fmt.Printf("子协程%v执行完毕\n", index)
+		}(ch)
+	}
+	<-chs[0] //利用有缓冲的通道实现主协程等待子协程
+	<-chs[1]
+	fmt.Println("所有子协程执行完毕\n")
+	gData.Range(func(key, value any) bool {
+		fmt.Printf("数据key：%v,val:%v\n", key, value)
+		return true
+	})
 }
+
 ```
