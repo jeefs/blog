@@ -1,10 +1,9 @@
 ### 开发笔记
 - [工作区支持多Git仓库](https://github.com/jeefs/blog/blob/d9cee1863bcc188656ce7d79eb33f252b83bd791/codeNotes/multi-git.md)
-- [go-machinery任务队列入门教程]()todo
-- [七牛云对象存储sdk入门教程]() todo
+- [go-machinery任务队列]()todo
+- [go对接七牛云存储]() todo
 - [七牛云图片异步上传方案](https://github.com/jeefs/blog/blob/a10f7afe398fca1e796925f4f36af1f4d17d2b50/bookNotes/uploading-files-asynchronously-using-qiniu.txt) todo
 - [数据库存储树形结构]() todo
-- [递归打印多级分层结构]() todo
 - [cgo调用c](./codeNotes/cgo.md)
 - [go使用正则匹配](./codeNotes/go-use-regxp.md)
 - [简单的提取json花括号部分](./codeNotes/split-jsonStr.md)
