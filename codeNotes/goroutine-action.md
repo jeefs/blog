@@ -31,3 +31,33 @@ func main() {
 }
 
 ```
+
+2.多个子协程读写变量
+一般情况下，多个协程共享读写数据会出现数据竞争，为了避免这种情况可以使用sync.Map来保证线程安全
+```
+package main
+
+import (
+  "sync"
+  "fmt"
+)
+
+func main() {
+   var gData sync.Map
+   chs :=  []chan int8{make(chan int8,1),make(chan int8,1)}
+   for k,ch := range chs {
+	go func(ch chan<- int8) {
+		defer close(ch)
+		index := k+1
+		gData.Store(index,strct{})
+		ch<-index
+        }(ch)
+   }
+   
+   
+   
+ 
+ 
+  
+}
+```
