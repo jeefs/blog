@@ -11,6 +11,7 @@
 - [开放接口签名](./codeNotes/open-api-sign.md)
 - [ubuntu server 20.04 lts 安装docker](./codeNotes/install-docker.md)
 - [nsq简单认识](./codeNotes/nsq-beginning.md)
+- [nsq实战](./codeNotes/nsq-action.md)
 
 ### 中间件
 - MySql
