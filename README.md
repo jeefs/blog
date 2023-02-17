@@ -12,16 +12,12 @@
 - [nsq简单认识](./codeNotes/nsq-beginning.md)
 - [nsq实战](./codeNotes/nsq-action.md)
 
-### 中间件
-- MySql
-- Redis
-- taskqueue
-
 ### 读书笔记
 - [代码整洁之道]()todo
 - [敏捷软件开发]()todo
 - [Go专家编程]()todo
 - [SQL必知必会]()todo
+
 ### 业务技能
 - 缓存设计
 - 数据库表设计及优化
