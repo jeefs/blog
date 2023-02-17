@@ -53,7 +53,7 @@ func main() {
 		go func(ch chan<- int) {
 			fmt.Printf("子协程%v开始执行\n", index)
 			defer close(ch)
-			gData.Store(index, struct{}{})
+			gData.Store(index, struct{}{}) //sync.Map写入必须使用Store(k,v)方法
 			ch <- index
 			fmt.Printf("子协程%v执行完毕\n", index)
 		}(ch)
@@ -61,7 +61,7 @@ func main() {
 	<-chs[0] //利用有缓冲的通道实现主协程等待子协程
 	<-chs[1]
 	fmt.Println("所有子协程执行完毕\n")
-	gData.Range(func(key, value any) bool {
+	gData.Range(func(key, value any) bool {  //sync.Map读取必须使用Range()方法
 		fmt.Printf("数据key：%v,val:%v\n", key, value)
 		return true
 	})
