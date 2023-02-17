@@ -22,8 +22,9 @@ nohup ./nsqadmin --lookupd-http-address=127.0.0.1:4161 > nohup.nsqadmin.out 2>&1
 ```
 
 3.部署nsq集群(提前安装好docker)
+
 ![](http://www.nsqio.cn/images/tumblr_inline_mf8sfr2sp41qj3yp2.png)
-上图为官方推荐的集群部署拓扑
+<center>上图为官方推荐的集群部署拓扑</center>
 
 1.拉取nsq的docker镜像
 ```
@@ -60,7 +61,7 @@ docker run -d --name nsqadmin -p 4171:4171 nsqio/nsq /nsqadmin --lookupd-http-ad
 ```
 curl -X POST http://192.168.6.100:4151/topic/create?topic=test-topic  创建topic(队列)
 ```
-创建channel 通道
+创建channel(通道)
 ```
 curl -X POST 'http://192.168.6.100:4151/channel/create?topic=test-topic&channel=test-channel'
 ```
