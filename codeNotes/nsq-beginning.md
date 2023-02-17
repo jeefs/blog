@@ -20,7 +20,7 @@ nsq有3个守护程序：
 - nsqd
 - nsqlookupd
 - nsqadmin
-- 
+
 1.nsqd的作用是接收，排队，发送消息给客户端的守护程序
 
 2.nsqlookupd的作用是管理拓扑信息并提供最终一致的发现服务的守护程序
