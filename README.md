@@ -11,6 +11,7 @@
 - [ubuntu server 20.04 lts 安装docker](./codeNotes/install-docker.md)
 - [nsq简单认识](./codeNotes/nsq-beginning.md)
 - [nsq实战](./codeNotes/nsq-action.md)
+- [go协程常用模式](./codeNotes/goroutine-action.md)
 
 ### 读书笔记
 - [代码整洁之道]()todo
