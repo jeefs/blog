@@ -12,6 +12,7 @@
 - [nsq简单认识](./codeNotes/nsq-beginning.md)
 - [nsq实战](./codeNotes/nsq-action.md)
 - [go协程常用模式](./codeNotes/goroutine-action.md)
+- [systemd部署golang项目](./codeNotes/systemd-action.md)
 
 ### 读书笔记
 - [代码整洁之道]()todo
