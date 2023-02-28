@@ -51,10 +51,7 @@ func (e UserDao) WithBySex(sex int) DBOption {
 //使用
 newDao := dao.NewDao(context.Background(), databases.DB)
 userDao := newDao.userDao()
-var opts []dao.DBOption
-opts = append(opts, userDao.WithByAge(25))
-opts = append(opts, userDao.WithBySex(1))
-res,err := userDao.GetUser(nil,opts...)
+res,err := userDao.GetUser(nil,userDao.WithByAge(25),userDao.WithBySex(1))
 
 //选项模式合适用条件组合的场景，例如数据条件查询，能灵活组合不同查询条件，提高代码内聚
 ```
