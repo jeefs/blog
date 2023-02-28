@@ -56,7 +56,7 @@ kustomizeVersion: v4.5.7
 
 ###  安装本地集群
 - [minikube](https://github.com/kubernetes/minikube)
-- kind(https://github.com/kubernetes-sigs/kind)
+- [kind](https://github.com/kubernetes-sigs/kind)
 
 1.安装kind
 
@@ -71,7 +71,14 @@ sudo mv ./kind /usr/local/bin/kind
 kind create cluster
 ```
 
+查看创建成功的节点
+
+```
+kubectl get nodes
+```
+
 3.删除cluster
+
 ```
 kind delete cluster
 ```

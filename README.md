@@ -16,7 +16,7 @@
 ### 云原生
 - [docker笔记01-概念]()
 - [docker笔记02-安装](./codeNotes/install-docker.md)
-- [kubernetes笔记01-概念]()
+- [kubernetes笔记01-概念](./codeNotes/introduction-k8s.md)
 - [kubernetes笔记02-安装](./codeNotes/install-k8s.md)
 
 ### 读书笔记
