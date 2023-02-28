@@ -26,7 +26,7 @@
 - 业务架构
 - 订单超时释放
 ### 模式
-- Option模式
+- [Option模式](./codeNotes/option-pattern.md)
 ### 核心知识
 - 常用算法与数据结构
   - [数组](./coreKownledge/algo/array.md)
@@ -47,5 +47,6 @@
   -  [MIT 6.828 JOS](https://zhuanlan.zhihu.com/p/74028717) 
   -  [hurlex 项目](http://wiki.0xffffff.org/)
 - 计算机网络TCP/IP协议
+  - 网络网络分层 
   - 构建计算机网络，搭建一个小型网络，包含路由转发 
   - 实现应用层网络程序或者抓包组包（２层）程序
