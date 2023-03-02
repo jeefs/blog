@@ -1,5 +1,5 @@
 ### 概念
-![img](./pic/k8s-logic-level.jpg)
+![img](../pic/k8s-logic-level.jpg)
 
 Node是k8s集群中的节点，可以是物理机或虚拟机，一个节点下通常会包含多个pod，可以把节点看作是一台物理机
 
