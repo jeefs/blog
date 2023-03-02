@@ -1,6 +1,6 @@
 ### 概念
 Pod 是k8s调度的最小单位，一个pod代表一个应用实例，实例可以扩展多个pod，pod 可存在一个或多个容器
-![img](./pic/k8s-logic-level.jpg)
+![img](../pic/k8s-logic-level.jpg)
 
 
 ### pod操作
