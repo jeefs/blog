@@ -67,6 +67,7 @@ sudo mv ./kind /usr/local/bin/kind
 ```
 
 2.创建cluster
+
 ```
 kind create cluster
 ```
@@ -82,3 +83,4 @@ kubectl get nodes
 ```
 kind delete cluster
 ```
+

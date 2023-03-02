@@ -18,6 +18,9 @@
 - [docker笔记02-安装](./codeNotes/install-docker.md)
 - [kubernetes笔记01-概念](./codeNotes/introduction-k8s.md)
 - [kubernetes笔记02-安装](./codeNotes/install-k8s.md)
+- [kubernetes笔记03-node](./codeNotes/k8s-node.md)
+- [kubernetes笔记04-pod](./codeNotes/k8s-pod.md)
+- [kubernetes笔记03-service](./codeNotes/k8s-service.md)
 
 ### 读书笔记
 - [代码整洁之道]()todo
