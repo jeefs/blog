@@ -9,7 +9,8 @@
 /etc/supervisor/conf.d
 ```
 
-配置文件格式:
+配置文件格式: 
+admin.conf
 ```
 [program:admin]
 user=root
