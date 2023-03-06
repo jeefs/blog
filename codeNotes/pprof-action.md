@@ -51,6 +51,7 @@ mutex：锁的信息
 threadcreate：线程信息
 ```
 我们重点关注goroutine 这一项，点击进去，会显示近期收集的协程
+http://服务域名/debug/pprof/goroutine?debug=1 ，或者debug=2显示更详细信息
 ```
 goroutine profile: total 32
 10 @ 0x43f836 0x44f6fc 0xa844ca 0x471081
@@ -70,7 +71,7 @@ goroutine profile: total 32
 ```
 也可以命令行方式获取信息
 ```
-go tool pprof http://127.0.0.1:2027/debug/pprof/heap //下载相关信息并进入交互模式\
+go tool pprof http://127.0.0.1:2027/debug/pprof/heap //下载相关信息并进入交互模式
 进入交互模式后，可以输入命令筛选数据
 top 10 //筛选出内存占用前10的函数
 
@@ -91,7 +92,7 @@ linux系统自带top 命令，输入后按大写M，可以根据内存占用排�
 
 
 引用:
-https://lessisbetter.site/2019/05/18/go-goroutine-leak/
-https://blog.csdn.net/pengpengzhou/article/details/107000659
-
+- https://lessisbetter.site/2019/05/18/go-goroutine-leak
+- https://wudaijun.com/2018/04/go-pprof
+- https://blog.csdn.net/pengpengzhou/article/details/107000659
 
