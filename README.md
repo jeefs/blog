@@ -13,6 +13,7 @@
 - [go协程常用模式](./codeNotes/goroutine-action.md)
 - [systemd部署golang项目](./codeNotes/systemd-action.md)
 - [supervisor部署golang项目](./codeNotes/supervisor-action.md)
+- [pprof运行时监控](./codeNotes/pprof-action.md)
 
 ### 云原生
 - [docker笔记01-概念]()
