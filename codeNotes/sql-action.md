@@ -8,18 +8,20 @@
 
 
 - 实际场景下的索引命中优化
-表A用户表  有字段 id,name,phone
-表B签到表  有字段 id,uid,ctime,remark
+1.表A用户表  有字段 id,name,phone
+2.表B签到表  有字段 id,uid,ctime,remark
 
 
 需求1：找出按签到时间倒序的前10用户信息并包含签到信息
 方案:
+```
  select id from A order by created_at  desc limit 10  //created_at 建立普通索引
  select * from B where id  in( select id from B where uid = 1)  union all select * from B where id  in( select id from B where uid = 1)  //uid建立普通索引，将第一步获取的id集合组成union all语句，能高效的使用主键索引，合并开销可以忽略不记
  
  疑问: 为什么不写成 select * from B where uid in(select id from A order by created_at  desc limit 10 )  //原因有2种，第一in子查询不支持order by和limit 关键字，第二,in 子句在某些条件下会索引失效
  
 关键点: 在查询整行记录时，将普通字段条件转化为主键查询
+```
 
 
 
