@@ -18,6 +18,8 @@ command=/bin/bash -c "cd /source/gsmv1/cmd/admin && ./admin" //执行的命令
 stopsignal=TERM
 autostart=true
 autorestart=true
+stopasgroup=true
+killasgroup=true
 stdout_logfile=/source/gsmv1/cmd/admin/admin-stdout.log
 stderr_logfile=/source/gsmv1/cmd/admin/admin-stderr.log
 ```
