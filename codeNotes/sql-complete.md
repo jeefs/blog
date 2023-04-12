@@ -47,3 +47,23 @@ END;
 call add_col_homework();-- 运行该存储过程
 
 drop PROCEDURE add_col_homework; -- 删除该存储过程
+
+
+
+#创建数据库只读用户
+SELECT user,host FROM mysql.user; //查看所有用户
+
+SELECT * FROM mysql.user WHERE user='root' //查看root用户所有权限
+ 
+CREATE USER 'test'@'%' IDENTIFIED BY '123456'; //创建test用户
+ 
+GRANT SELECT ON crmv1.* TO 'test'@'%'; //赋予test用户在crmv1库只读权限
+
+
+FLUSH PRIVILEGES; //刷新权限
+
+
+DROP USER 'test'@'%'; //删除test用户
+
+
+
