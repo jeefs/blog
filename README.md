@@ -16,6 +16,7 @@
 - [pprof运行时监控](./codeNotes/pprof-action.md)
 - [ubuntu安装go](./codeNotes/install-go.md)
 - [sql优化建议](./codeNotes/sql-action.md)
+- [使用logrotate按天生成supervisor日志](./codeNotes/logrotate.md)
 
 ### 云原生
 - [docker笔记01-概念]()
