@@ -23,15 +23,15 @@ vim /etc/logrotate.d/supervisor-admin
 ```
 logrotate会根据/var/log/supervisor/admin_std*.log匹配日志来备份,该应用的日志会被放到这个目录
 
-daily: 日志按天轮询。也可以设为weekly、monthly、yearly
-rotate ： 备份数，超过的会删除
-dateext: 备份文件名包含日期信息
-dateyesterday 用昨天的日期做后缀,因为日志一般是凌晨备份前一天的数据，如果不用这个参数，会造成，日志文件显示的日期和实际不是一天
-copytruncate： 首先将目标文件复制一份，然后在做截取（truncate）。这样做就防止了直接将原目标文件重命名引起的问题。
-delaycompress ：与compress选项一起用，delaycompress选项指示logrotate不将最近的归档压缩，压缩将在下一次轮循周期进行 就是最新两个日志文档不压缩
-compress： 压缩文件。如果不想压缩 可以和delaycompress 一起去掉
-missingok： 忽略错误
-notifempty： 如果没有日志 不进行轮询
+- daily: 日志按天轮询。也可以设为weekly、monthly、yearly
+- rotate ： 备份数，超过的会删除
+- dateext: 备份文件名包含日期信息
+- dateyesterday 用昨天的日期做后缀,因为日志一般是凌晨备份前一天的数据，如果不用这个参数，会造成，日志文件显示的日期和实际不是一天
+- copytruncate： 首先将目标文件复制一份，然后在做截取（truncate）。这样做就防止了直接将原目标文件重命名引起的问题。
+- delaycompress ：与compress选项一起用，delaycompress选项指示logrotate不将最近的归档压缩，压缩将在下一次轮循周期进行 就是最新两个日志文档不压缩
+- compress： 压缩文件。如果不想压缩 可以和delaycompress 一起去掉
+- missingok： 忽略错误
+- notifempty： 如果没有日志 不进行轮询
 
 
 ### 配置supervisor
