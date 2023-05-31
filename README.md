@@ -34,7 +34,7 @@
 - [SQL必知必会]()todo
 
 ### 源码阅读
-- [go-redis]()todo
+- [goredis]()todo
 - [robfig/cron]todo
 - [RichardKnop/machinery]
 
