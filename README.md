@@ -33,6 +33,11 @@
 - [Go专家编程]()todo
 - [SQL必知必会]()todo
 
+### 源码阅读
+- [go-redis]()todo
+- [robfig/cron]todo
+- [RichardKnop/machinery]
+
 ### 业务技能
 - 缓存设计
 - 数据库表设计及优化
