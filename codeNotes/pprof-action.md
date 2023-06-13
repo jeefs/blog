@@ -107,4 +107,4 @@ go tool pprof -http=:8000 profile.out
 - https://lessisbetter.site/2019/05/18/go-goroutine-leak
 - https://wudaijun.com/2018/04/go-pprof
 - https://blog.csdn.net/pengpengzhou/article/details/107000659
-
+- https://zhuanlan.zhihu.com/p/396363069
