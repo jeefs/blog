@@ -90,7 +90,19 @@ traces //打印所有调用栈，以及调用栈的指标信息。
 
 linux系统自带top 命令，输入后按大写M，可以根据内存占用排序，也能帮助分析问题
 
+### 使用可视化工具分析耗时
+```
+//下载统计数据,采集30秒的数据
+curl -o profile.out https://app.sibsensing.cn/debug/pprof/profile?seconds=30
 
+//安装Graphviz
+https://graphviz.org/download/
+
+windows下需要将Graphviz\bin设置为环境变量,并且使用管理员权限运行bat控制台，进入安装目录下执行dot -c
+
+//展示可视化图形
+go tool pprof -http=:8000 profile.out
+```
 引用:
 - https://lessisbetter.site/2019/05/18/go-goroutine-leak
 - https://wudaijun.com/2018/04/go-pprof
