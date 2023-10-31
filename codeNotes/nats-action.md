@@ -52,8 +52,11 @@ func main() {
     initOnce.Do(func() {
         go consumer()
     })
+    producer()
 }
-
+type Data struct {
+    Msg string `json:msg`
+}
 func consumer() {
     nc, err := nats.Connect(nats.DefaultURL)
     if err != nil {
@@ -61,7 +64,13 @@ func consumer() {
         panic(err)
     }
     _, err = nc.Subscribe(TASK_NAME, func(msg *nats.Msg) {
-	    //todo handler msg	
+    //handle msg	
+    data := Data{}
+    err := json.Unmarshal(msg.Data, &data)
+        if err != nil {
+            return err
+        }
+        fmt.Println(data)
     })
     if err != nil {
         err = fmt.Errorf("NATS subscribe %v failed:%w", TASK_NAME, err)
@@ -82,7 +91,7 @@ func producer() {
     if err != nil {
         fmt.Println(err)
     }
-    err = nc.Publish(TASK_NAME, msg)
+    err = nc.Publish(TASK_NAME, []byte(`{"msg":"hello"}`))
 	if err != nil {
 	    fmt.Println(err)
     }
