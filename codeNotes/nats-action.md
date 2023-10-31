@@ -90,6 +90,11 @@ func producer() {
 
 ```
 
+reference:
+
+<https://docs.nats.io/nats-concepts/jetstream/streams>
+<https://juejin.cn/post/7152084392628715551>
+
 
 
 
