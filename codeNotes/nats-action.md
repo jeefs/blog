@@ -46,7 +46,7 @@ import (
 	"sync"
 	"syscall"
 )
-const taskName = "defaultTask"
+const TASK_NAME = "defaultTask"
 
 func main() {
     initOnce.Do(func() {
@@ -57,14 +57,14 @@ func main() {
 func consumer() {
     nc, err := nats.Connect(nats.DefaultURL)
     if err != nil {
-    err = fmt.Errorf("NATS subscribe %v failed:%w", taskName, err)
+    err = fmt.Errorf("NATS subscribe %v failed:%w", TASK_NAME, err)
         panic(err)
     }
-    _, err = nc.Subscribe(taskName, func(msg *nats.Msg) {
+    _, err = nc.Subscribe(TASK_NAME, func(msg *nats.Msg) {
 	    //todo handler msg	
     })
     if err != nil {
-        err = fmt.Errorf("NATS subscribe %v failed:%w", taskName, err)
+        err = fmt.Errorf("NATS subscribe %v failed:%w", TASK_NAME, err)
         panic(err)
     }
     quit := make(chan os.Signal)
@@ -82,7 +82,7 @@ func producer() {
     if err != nil {
         fmt.Println(err)
     }
-    err = nc.Publish(mq.SPLIT_EXPERIMENT_TASK, msg)
+    err = nc.Publish(TASK_NAME, msg)
 	if err != nil {
 	    fmt.Println(err)
     }
