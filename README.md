@@ -18,6 +18,7 @@
 - [sql优化建议](./codeNotes/sql-action.md)
 - [使用logrotate按天生成supervisor日志](./codeNotes/logrotate.md)
 - [高性能excel库之excelize](./codeNotes/excelize-action.md)
+- [nats实战](./codeNotes/nats-action.md)
 
 ### rust简明教程
 - [环境搭建](./rust/dev-tools.md)
