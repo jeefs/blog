@@ -20,7 +20,7 @@
 - [高性能excel库之excelize](./codeNotes/excelize-action.md)
 - [nats实战](./codeNotes/nats-action.md)
 
-### package useage
+### package usage
 - [context](./codeNotes/context-action.md)
 
 ### rust简明教程
