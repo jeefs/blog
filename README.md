@@ -20,6 +20,12 @@
 - [高性能excel库之excelize](./codeNotes/excelize-action.md)
 - [nats实战](./codeNotes/nats-action.md)
 
+- go编程
+  - [map]
+  - [slice](./coreKownledge/golang/slice.md)
+  - goroutine
+  - lock
+
 ### rust简明教程
 - [环境搭建](./rust/dev-tools.md)
 
@@ -60,12 +66,6 @@
   - 树
   - 堆
   - 图
-- go编程语法及原理
-  - map
-  - [slice](./coreKownledge/golang/slice.md)
-  - [array](./coreKownledge/golang/array.md)
-  - goroutine
-  - lock
 - 操作系统基础知识
   -  [MIT 6.828 JOS](https://zhuanlan.zhihu.com/p/74028717) 
   -  [hurlex 项目](http://wiki.0xffffff.org/)
