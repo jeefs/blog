@@ -106,8 +106,6 @@ func SendAndReceiveMsg(wg *sync.WaitGroup) {
 	}()
 }
 
-```
-
 for range 遍历channel时有几点需要注意:
 1.即使通道被关闭，for range会遍历完所有元素后才结束代码运行
 2.如果通道的值为nil,则for range会panic
@@ -190,3 +188,6 @@ func BreakSelectChan(wg *sync.WaitGroup) {
 		wg.Done()
 	}()
 }
+
+
+```
