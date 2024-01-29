@@ -65,7 +65,11 @@ func ClosedChanAgainClosePanic() {
 	close(ch1)
 	close(ch1) //panic,不能关闭已关闭的chan
 }
+```
 
+
+### 判断chan是否关闭
+```
 // 读chan可狭义判断chan是否关闭，如果chan关闭时里面还有未取出的值，则第二个值还是true，通过此方式判断chan是否关闭有延迟
 func IsChanClosed() {
 	ch1 := make(chan int, 2)
@@ -105,7 +109,10 @@ func SendAndReceiveMsg(wg *sync.WaitGroup) {
 		wg.Done()
 	}()
 }
+```
 
+### 遍历chan
+```
 for range 遍历channel时有几点需要注意:
 1.即使通道被关闭，for range会遍历完所有元素后才结束代码运行
 2.如果通道的值为nil,则for range会panic
@@ -131,7 +138,10 @@ func IterateOverTheChans(wg *sync.WaitGroup) {
 		wg.Done()
 	}()
 }
+```
 
+### 利用select监听chan的读写
+```
 /*
 select使用时需要注意:
 1.分支条件阻塞视为条件不满足
