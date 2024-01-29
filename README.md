@@ -19,7 +19,7 @@
 - [使用logrotate按天生成supervisor日志](./codeNotes/logrotate.md)
 - [高性能excel库之excelize](./codeNotes/excelize-action.md)
 - [nats实战](./codeNotes/nats-action.md)
-
+- [Git使用Personal access tokens拉取代码](./codeNotes/git-pat.md)
 - go编程
   - [map]
   - [slice](./coreKownledge/golang/slice.md)
