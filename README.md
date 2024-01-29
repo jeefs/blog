@@ -22,7 +22,7 @@
 ### go编程核心知识 
 - [map]
 - [slice](./coreKownledge/golang/slice.md)
-- [goroutine]
+- goroutine
   - [channel](./coreKownledge/golang/channel.md)
   - [sync]
   - [context]
