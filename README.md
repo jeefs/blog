@@ -20,13 +20,14 @@
 - [高性能excel库之excelize](./codeNotes/excelize-action.md)
 - [nats实战](./codeNotes/nats-action.md)
 - [Git使用Personal access tokens拉取代码](./codeNotes/git-pat.md)
-- go编程核心知识 
-  - [map]
-  - [slice](./coreKownledge/golang/slice.md)
-  - [goroutine]
-    - [channel](./coreKownledge/golang/channel.md)
-    - [sync]
-    - [context]
+
+### go编程核心知识 
+- [map]
+- [slice](./coreKownledge/golang/slice.md)
+- [goroutine]
+  - [channel](./coreKownledge/golang/channel.md)
+  - [sync]
+  - [context]
   - [string]
   - [io]
   - [error]

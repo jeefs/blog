@@ -78,6 +78,7 @@ func IsChanClosed() {
 	fmt.Println(v)
 }
 
+//可用死循环来轮询chan是否关闭
 func SendAndReceiveMsg(wg *sync.WaitGroup) {
 	ch := make(chan int, 10)
 	go func() {
