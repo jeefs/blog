@@ -26,9 +26,9 @@
   - [channel](./coreKownledge/golang/channel.md)
   - [sync]
   - [context]
-  - [string]
-  - [io]
-  - [error]
+- [string]
+- [io]
+- [error]
 
 ### rust简明教程
 - [环境搭建](./rust/dev-tools.md)
