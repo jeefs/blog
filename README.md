@@ -1,9 +1,7 @@
 ### 开发笔记
 - [工作区支持多Git仓库](./codeNotes/multi-git.md)
-- [go-machinery任务队列]()todo
 - [go对接七牛云存储]() todo
 - [七牛云图片异步上传方案]() todo
-- [数据库存储树形结构]() todo
 - [cgo调用c](./codeNotes/cgo.md)
 - [go使用正则匹配](./codeNotes/go-use-regxp.md)
 - [简单的提取json花括号部分](./codeNotes/split-jsonStr.md)
