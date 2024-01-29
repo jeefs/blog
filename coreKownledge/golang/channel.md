@@ -1,4 +1,4 @@
-### 通道的基本特性
+### channel的基本特性
 - 对于同一个通道，发送操作之间是互斥的，接收操作之间也是互斥的
 - 发送操作和接收操作中对元素值的处理都是不可分割的
 - 发送操作在完全完成之前会被阻塞。接收操作也是如此
@@ -8,7 +8,7 @@
 - 发送:复制元素值，放置副本到通道内部
 - 接受:复制元素值，放置副本到接受方，删除原值
 
-### 通道被阻塞或导致panic的几种情况
+### channel被阻塞或导致panic的几种情况
 ```
 package channel
 
@@ -68,7 +68,7 @@ func ClosedChanAgainClosePanic() {
 ```
 
 
-### 判断chan是否关闭
+### 判断channel是否关闭
 ```
 // 读chan可狭义判断chan是否关闭，如果chan关闭时里面还有未取出的值，则第二个值还是true，通过此方式判断chan是否关闭有延迟
 func IsChanClosed() {
@@ -111,7 +111,7 @@ func SendAndReceiveMsg(wg *sync.WaitGroup) {
 }
 ```
 
-### 遍历chan
+### 遍历channel
 ```
 for range 遍历channel时有几点需要注意:
 1.即使通道被关闭，for range会遍历完所有元素后才结束代码运行
@@ -140,7 +140,7 @@ func IterateOverTheChans(wg *sync.WaitGroup) {
 }
 ```
 
-### 利用select监听chan的读写
+### 利用select监听channel的读写
 ```
 /*
 select使用时需要注意:
