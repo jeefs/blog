@@ -24,7 +24,7 @@
 - [slice](./coreKownledge/golang/slice.md)
 - goroutine
   - [channel](./coreKownledge/golang/channel.md)
-  - [sync]
+  - [sync](./coreKownledge/golang/sync.md)
   - [context]
 - [string]
 - [io]
