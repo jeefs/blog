@@ -25,7 +25,7 @@
 - goroutine
   - [channel](./coreKownledge/golang/channel.md)
   - [sync](./coreKownledge/golang/sync.md)
-  - [context]
+  - [context](./coreKownledge/golang/ctx.md)
 - [string]
 - [io]
 - [error]
