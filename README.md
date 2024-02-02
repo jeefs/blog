@@ -30,8 +30,22 @@
 - [io]
 - [error]
 
-### rust简明教程
+### rust闯关之路
 - [环境搭建](./rust/dev-tools.md)
+- [字符串](./rust/string.md)
+- [枚举] (./rust/enum.md)
+- [数组](./rust/array.md)
+- [元组](./rust/tuple.md)
+- [错误处理] (./rust/error-handle.md)
+- [模块] (./rust/mod.md)
+- [生命周期](./rust/lifecycle.md)
+- [方法](./rust/method.md)
+- [特质trait](./rust/trait.md)
+- [泛型](./rust/generic.md)
+- [线程处理](./rust/thread.md)
+- [常用宏](./rust/macro-attr.md)
+- [cargo包管理](./rust/cargo.md)
+- [常用包](./rust/awesome-package.md)
 
 ### 云原生
 - [docker笔记01-概念]()
