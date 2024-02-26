@@ -19,7 +19,10 @@
 打开cmd控制台输入
 ```
 java -version
+```
+
 输出如下命令则安装成功
+```
 java version "1.8.0_401"
 Java(TM) SE Runtime Environment (build 1.8.0_401-b10)
 Java HotSpot(TM) 64-Bit Server VM (build 25.401-b10, mixed mode)
