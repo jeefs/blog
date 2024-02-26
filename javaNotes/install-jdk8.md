@@ -1,4 +1,4 @@
-### 1.下载按转包
+### 1.下载安装包
 [下载地址直达](https://download.oracle.com/otn/java/jdk/8u401-b10/4d245f941845490c91360409ecffb3b4/jdk-8u401-windows-x64.exe)
 下载完成后，安装即可
 
