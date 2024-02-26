@@ -47,6 +47,10 @@
 - [cargo包管理](./rust/cargo.md)
 - [常用包](./rust/awesome-package.md)
 
+### Jave开发
+- [jdk8开发环境配置](./javaNotes/install-jdk8.md)
+- [maven安装与使用](./javaNotes/maven-action.md)
+
 ### 云原生
 - [docker笔记01-概念]()
 - [docker笔记02-安装](./codeNotes/install-docker.md)
