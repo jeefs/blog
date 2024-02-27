@@ -51,6 +51,8 @@
 - [jdk8开发环境配置](./javaNotes/install-jdk8.md)
 - [maven安装与使用](./javaNotes/maven-action.md)
 
+### k8s集群实验
+- [搭建本地集群](./cloudNative/install-k8s-cluster.md)
 ### 云原生
 - [docker笔记01-概念]()
 - [docker笔记02-安装](./codeNotes/install-docker.md)
