@@ -84,4 +84,5 @@ maven结构
 </project>
 ```
 
-###   
+### IDEA中使用MAVEN
+[参考](https://c.biancheng.net/maven2/idea-build-maven.html)
