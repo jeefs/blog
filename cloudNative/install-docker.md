@@ -19,3 +19,24 @@ sudo apt install docker-ce  //安装docker
 
 sudo systemctl status docker //查看docker运行状态
 ```
+
+### 卸载方法
+```
+1.删除docker及安装时自动安装的所有包
+apt-get autoremove docker docker-ce docker-engine  docker.io  containerd runc
+
+2.查看docker是否卸载干净
+dpkg -l | grep docker
+
+dpkg -l |grep ^rc|awk '{print $2}' |sudo xargs dpkg -P # 删除无用的相关的配置文件
+
+3.删除没有删除的相关插件
+apt-get autoremove docker-ce-*
+
+4.删除docker的相关配置&目录
+rm -rf /etc/systemd/system/docker.service.d
+rm -rf /var/lib/docker
+
+5.确定docker卸载完毕
+docker --version
+```
