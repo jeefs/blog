@@ -29,9 +29,10 @@ network:
       gateway4: 192.168.123.2
       #dsn服务器地址
       nameservers:
-        addresses: [192.168.123.131,8.8.8.8]
+        addresses: [192.168.123.2,8.8.8.8]
   version: 2
 
+ 保存后，执行netplan apply生效
 ```
 
 3.配置hosts:
