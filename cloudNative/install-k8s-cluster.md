@@ -128,6 +128,7 @@ kubeadm init \
   --pod-network-cidr=10.244.0.0/16 \
   --ignore-preflight-errors=all
 ```
+当初始化master时可以使用kubeadm reset清理缓存，解决失败原因后重新初始化
 
 执行初始化成功后会提示,继续执行如下命令
 ```
@@ -176,9 +177,6 @@ stache32   Ready    <none>          4d    v1.26.2
 stache33   Ready    <none>          4d    v1.26.2
 ```
 
-当初始化失败先清理kubeadm缓存，再解决失败原因后重试
-kubeadm reset
-
 参考:
-https://zhuanlan.zhihu.com/p/612051521?utm_id=0
-https://jasonkayzk.github.io/2021/05/16/%E5%9C%A8VMWare%E4%B8%AD%E9%83%A8%E7%BD%B2%E4%BD%A0%E7%9A%84K8S%E9%9B%86%E7%BE%A4/
+- https://zhuanlan.zhihu.com/p/612051521?utm_id=0
+- https://jasonkayzk.github.io/2021/05/16/%E5%9C%A8VMWare%E4%B8%AD%E9%83%A8%E7%BD%B2%E4%BD%A0%E7%9A%84K8S%E9%9B%86%E7%BE%A4/
