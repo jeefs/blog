@@ -25,9 +25,9 @@ network:
     ens33:
       #静态ip地址
       addresses: [192.168.123.131/24]
-      #网关地址
+      #网关地址(虚拟机可以通过NAT查看网关IP)
       gateway4: 192.168.123.2
-      #dsn服务器地址
+      #dsn服务器地址,设置为网关IP和公用DNS
       nameservers:
         addresses: [192.168.123.2,8.8.8.8]
   version: 2
@@ -98,8 +98,8 @@ net.bridge.bridge-nf-call-iptables = 1
 EOF
 ```
 
-8.安装docker
-参考[ubuntu下安装docker](./install-docker.md)
+8.安装containerd容器运行时
+参考[ubuntu下安装containerd](./install-containerd.md)
 
 
 9.安装k8s
@@ -113,4 +113,71 @@ node1  -> 192.168.123.132
 node2  -> 192.168.123.133
 
 ### 集群配置
+1.初始化master节点
+```
+// apiserver-advertise-address 为master主机ip
+// image-repository 为镜像地址
+// kubernetes-version 为k8s安装的版本号
+// service-cidr 为服务器地址
+// pod-network-cidr 为pod 内部网络地址段
+kubeadm init \
+  --apiserver-advertise-address=192.168.123.131 \
+  --image-repository registry.aliyuncs.com/google_containers \
+  --kubernetes-version v1.28.2 \
+  --service-cidr=10.96.0.0/12 \
+  --pod-network-cidr=10.244.0.0/16 \
+  --ignore-preflight-errors=all
+```
+
+执行初始化成功后会提示,继续执行如下命令
+```
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+```
+还会生成密钥,在两外两台主机上分别执行，即可让node节点加入
+```
+kubeadm join 192.168.123.131:6443 --token dquo1s.5dlohkhucp01gu8p \
+        --discovery-token-ca-cert-hash sha256:072f078cffef717c8e07e31c145129c85b4573624b079f214a58e2fc19748b0e
+```
+
+### 安装CNI插件calico
+```
+//安装calico依赖说明：https://docs.tigera.io/calico/latest/getting-started/kubernetes/self-managed-onprem/onpremises
+
+//此步骤仅在master执行即可
+wget https://raw.githubusercontent.com/projectcalico/calico/v3.25.0/manifests/calico.yaml
+
+//修改配置文件
+将
+# - name: CALICO_IPV4POOL_CIDR
+#   value: "192.168.0.0/16"
+修改为
+- name: CALICO_IPV4POOL_CIDR
+  value: "10.244.0.0/16"
+//CALICO_IOPV4POOL_CIDR必须和kubeadm初始化时--pod-network-cdr保持一致
+
+
+//应用calico配置，安装
+kubectl apply -f calico.yaml
+
+//验证查看node注册状态，当为 Ready 时表示网络插件安装完成
+kubectl get node
+NAME       STATUS   ROLES           AGE   VERSION
+stache31   Ready    control-plane   4d    v1.26.2
+stache32   Ready    <none>          4d    v1.26.2
+stache33   Ready    <none>          4d    v1.26.2
+
+//验证查看node注册状态，当为 Ready 时表示网络插件安装完成
+kubectl get node
+NAME       STATUS   ROLES           AGE   VERSION
+stache31   Ready    control-plane   4d    v1.26.2
+stache32   Ready    <none>          4d    v1.26.2
+stache33   Ready    <none>          4d    v1.26.2
+```
+
+当初始化失败先清理kubeadm缓存，再解决失败原因后重试
+kubeadm reset
+
+
 
