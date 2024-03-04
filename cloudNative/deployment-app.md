@@ -1,6 +1,6 @@
-### [安装docker](../codeNotes/install-docker.md)
+### 一,[安装docker](../codeNotes/install-docker.md)
 
-### 编写app
+### 二，编写app
 ```
 //创建项目目录
 mkdir go-hello-app
@@ -36,7 +36,7 @@ func main() {
 }
 ```
 
-### 打包
+### 三,打包镜像
 ```
 vim Dockerfile
 
@@ -70,7 +70,7 @@ docker login 登录
 docker push jeefs:go-hello-app:v0.0.1
 ```
 
-//部署镜像到k8s
+### 四，部署镜像到k8s
 ```
 //本地运行测试一下
 docker run -d -p 8080:8080 --rm --name go-hello-app-container jeefs/go-hello-app:v0.0.1
