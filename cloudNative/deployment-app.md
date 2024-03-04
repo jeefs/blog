@@ -1,4 +1,4 @@
-### [安装docker](./codeNotes/install-docker.md)
+### [安装docker](../codeNotes/install-docker.md)
 
 ### 编写app
 ```
