@@ -55,6 +55,7 @@
 ### k8s集群实验
 - [搭建本地集群](./cloudNative/install-k8s-cluster.md)
 - [部署应用到集群](./cloudNative/deployment-app.md)
+- [安装k8s-dashboard管理面板](./cloudNative/install-k8s-dashboard.md)
 
 ### 云原生
 - [docker笔记01-概念]()
