@@ -57,6 +57,9 @@
 - [部署应用到集群](./cloudNative/k8s/deployment-app.md)
 - [安装k8s-dashboard管理面板](./cloudNative/k8s/install-k8s-dashboard.md)
 
+### ansible实战
+- [安装与配置](./cloudNative/ansible/install-ansible.md)
+
 ### 云原生
 - [docker笔记01-概念]()
 - [docker笔记02-安装](./codeNotes/install-docker.md)
