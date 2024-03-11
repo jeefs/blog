@@ -85,4 +85,9 @@ maven结构
 ```
 
 ### IDEA中使用MAVEN
+使用命令行创建maven项目
+```
+mvn archetype:generate
+```
+
 [参考](https://c.biancheng.net/maven2/idea-build-maven.html)
