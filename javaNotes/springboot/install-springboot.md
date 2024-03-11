@@ -23,7 +23,7 @@
 点击Create创建项目，会生成项目结构:
 - xxxApplication.java 文件为项目启动文件
 - application.properties 文件为项目配置文件
-- pom.xml 文件为包依赖配置文件
+- pom.xml 文件为maven包依赖配置文件
 
 ### 测试
 //配置访问端口
@@ -51,4 +51,4 @@ public class HelloWorld {
 
 ```
 
-打开浏览器访问:http://localhost:8088/hello/helloworld ，会输出 hello world字符
+在Application.java文件上运行项目后打开浏览器访问:http://localhost:8088/hello/helloworld ，会输出 hello world字符
