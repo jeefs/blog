@@ -52,6 +52,7 @@
 - [jdk8开发环境配置](./javaNotes/install-jdk8.md)
 - [maven安装与使用](./javaNotes/maven-action.md)
 - [SpringBoot-项目创建](./javaNotes/springboot/install-springboot.md)
+- [SpringBoot-JDBC增删改查](./javaNotes/springboot/use-jdbc.md)
 
 ### k8s集群实验
 - [搭建本地集群](./cloudNative/k8s/install-k8s-cluster.md)
