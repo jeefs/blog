@@ -29,7 +29,8 @@ spring:
 
 ### jdbc增删改查
 
-```  JdbcDemo.java
+```java  
+//JdbcDemo.java
 package com.mike.study.springbootdemo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -136,7 +137,8 @@ public class JdbcDemo {
 
 ```
 
-``` User.java
+```java 
+//User.java
 package com.mike.study.springbootdemo.controller;
 
 import jakarta.validation.constraints.NotEmpty;
@@ -160,7 +162,8 @@ public class User {
 }
 ```
 
-``` JdbcVo.java
+```java 
+//JdbcVo.java
 package com.mike.study.springbootdemo.controller;
 
 public class JdbcVo {
