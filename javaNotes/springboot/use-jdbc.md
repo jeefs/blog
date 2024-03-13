@@ -123,7 +123,7 @@ public class JdbcDemo {
 
 
     //删除用户记录
-    @GetMapping("/users/delete")  //TODO 失败原因分析
+    @GetMapping("/users/delete")
     public Object update(@RequestParam("id") Integer id) {
         try {
             jdbcTemplate.update("DELETE FROM user WHERE id = ?",id);
