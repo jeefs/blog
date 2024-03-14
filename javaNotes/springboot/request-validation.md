@@ -142,3 +142,6 @@ public class User {
 ```
 
 单纯的使用校验规则会有一些问题，例如在校验失败时，框架会直接抛出异常，可以采用局部异常处理和全局异常处理来避免
+
+参考:
+https://maxqiu.com/article/detail/117#%E5%AE%9E%E4%BD%93%E5%AF%B9%E8%B1%A1%E6%A0%A1%E9%AA%8C
