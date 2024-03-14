@@ -53,6 +53,8 @@
 - [maven安装与使用](./javaNotes/maven-action.md)
 - [SpringBoot-项目创建](./javaNotes/springboot/install-springboot.md)
 - [SpringBoot-JDBC增删改查](./javaNotes/springboot/use-jdbc.md)
+- [SpringBoot-MyBatis3增删改查](./javaNotes/springboot/use-mybatis.md)
+- [SpringBoot-Validation请求校验](./javaNotes/springboot/use-validation.md)
 
 ### k8s集群实验
 - [搭建本地集群](./cloudNative/k8s/install-k8s-cluster.md)
