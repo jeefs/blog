@@ -55,6 +55,7 @@
 - [SpringBoot-JDBC增删改查](./javaNotes/springboot/use-jdbc.md)
 - [SpringBoot-MyBatis3增删改查](./javaNotes/springboot/use-mybatis.md)
 - [SpringBoot-Validation请求校验](./javaNotes/springboot/request-validation.md)
+- [SpringBoot-请求异常处理](./javaNotes/springboot/exception-handle.md)
 
 ### k8s集群实验
 - [搭建本地集群](./cloudNative/k8s/install-k8s-cluster.md)
