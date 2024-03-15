@@ -165,8 +165,8 @@ public class ResponseAdvice implements ResponseBodyAdvice<Object> {
 ```
 
 4.全局处理各种异常
-//RestExceptionHandler.java
 ```java
+//RestExceptionHandler.java
 package com.mike.study.springbootdemo.common;
 
 import jakarta.validation.ConstraintViolation;
