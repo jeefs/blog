@@ -33,3 +33,8 @@ supervisorctl stop admin //暂停应用
 supervisorctl status admin //查看状态
 supervisorctl restart admin //重启应用
 ```
+
+supervisor.sock refused connection  解决
+```
+supervisord -c /etc/supervisor/supervisord.conf
+```
