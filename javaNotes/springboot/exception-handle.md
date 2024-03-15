@@ -2,7 +2,7 @@
 - @RestControllerAdvice  springboot提供的请求拦截器注解，可以对请求或响应做全局拦截并处理
 - @ExceptionHandler      springboot提供的控制器全局异常捕获注解
 
-### 自定义全局响应结构，并在请求发生异常时处理
+### 自定义统一返回对象，开启全局异常处理
 
 1.统一返回值对象
 ```java
