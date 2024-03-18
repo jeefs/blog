@@ -14,7 +14,7 @@ EOF
 source ~/.bashrc
 ```
 
-###查看当前代理
+### 查看当前代理
 ```
 env|grep -i proxy
 ```
