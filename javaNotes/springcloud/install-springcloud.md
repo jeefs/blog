@@ -10,7 +10,7 @@ SpringCloud 是java生态圈中成熟的微服务解决方案,主要组件有:
 - SpringBoot
 
 
-[SpringCloud架构图](https://img-blog.csdnimg.cn/20190707000537192.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly94aW5jaGVuLmJsb2cuY3Nkbi5uZXQ=,size_16,color_FFFFFF,t_70)
+[SpringCloud架构图](https://img-blog.csdnimg.cn/20190707000537192.jpg)
 
 ###  创建父工程
 使用IDEA创建父工程gatewaydemo,配置如下
