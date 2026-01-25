@@ -117,13 +117,20 @@ package main
 import "fmt"
 
 func main() {
-	ch1 := make(chan int)
-	go func() {
-		ch1 <- 1
-		ch1 <- 2
-	}()
-	fmt.Println(<-ch1)
-	close(ch1)
+    ch1 := make(chan int)           // 无缓冲 channel
+
+    go func() {                     // 新 goroutine G2 启动
+        ch1 <- 1                    // G2: 发送 1（阻塞等待接收者）
+        // 这一行只有在 main 完成 <-ch1 后才会继续执行
+        ch1 <- 2                    // G2: 发送 2（再次阻塞等待接收者）
+    }()                             // G2 现在运行到 ch1 <- 1 阻塞
+
+    fmt.Println(<-ch1)              // main: 接收（阻塞等待发送者）
+    // 这一行完成时，happens-before 保证：G2 的 ch1 <- 1 已完成
+    // 同时：G2 的 ch1 <- 1 之后的代码可以继续执行
+
+    close(ch1)                      // main: 关闭 channel
+    // main 结束，整个程序退出
 }
 ```
 根据happens-before 规则，分析下这段代码执行流程这段代码使用的是无缓冲 channel（make(chan int) 没有指定容量），所以它的行为完全受 Go 内存模型 中关于 unbuffered channel 的 happens-before 规则支配。
