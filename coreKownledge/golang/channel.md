@@ -47,4 +47,36 @@ func main() {
 ```
 
 
+- #### 写缓存已满的通道会导致死锁
+```golang
+package main
 
+func main() {
+	ch1 := make(chan int, 1)
+	ch1 <- 1
+	ch1 <- 2 //死锁，因为缓存已满且没有协程读，导致写永久阻塞，最终死锁
+	close(ch1)
+}
+```
+
+- #### 读没有数据的通道会导致死锁
+```golang
+package main
+
+func main() {
+	ch1 := make(chan int, 1)
+	<-ch1 //永久阻塞，因为没有协程写
+}
+```
+
+- #### 读已经关闭的通道，会返回该通道类型的0值
+```golang
+package main
+
+import "fmt"
+
+func main() {
+	ch1 := make(chan int, 1)
+	close(ch1)
+	fmt.Println(<-ch1)  //返回0，不会报错
+}
