@@ -80,3 +80,32 @@ func main() {
 	close(ch1)
 	fmt.Println(<-ch1)  //返回0，不会报错
 }
+
+
+- #### range遍历通道时没有关闭通道会导致死锁
+```
+package main
+
+import "fmt"
+
+func main() {
+	ch1 := make(chan int)
+	go func() {
+		ch1 <- 1
+		ch1 <- 2
+		
+	}()
+
+	for v := range ch1 { //死锁，因为for循环无法结束
+		fmt.Println(v)
+	}
+	// for {
+	// 	v, ok := <-ch1
+	// 	if ok == false {
+	// 		break
+	// 	}
+	// 	fmt.Println(v)
+	// }
+}
+
+```
