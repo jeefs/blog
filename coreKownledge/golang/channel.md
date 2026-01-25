@@ -111,6 +111,36 @@ func main() {
 ```
 
 - #### 协程执行时序图
+```
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("G1创建")
+	ch1 := make(chan int)
+	fmt.Println("G1创建通道ch1")
+	go func() {
+		fmt.Println("G2创建")
+		fmt.Println("G2执行ch1<-1")
+		ch1 <- 1
+		fmt.Println("G2执行ch1<-1完毕")
+		fmt.Println("G2执行ch1<-2")
+		ch1 <- 2
+		fmt.Println("G2执行ch1<-2完毕")
+		fmt.Println("G2结束")
+	}()
+	fmt.Println("G1执行<-ch1")
+	fmt.Println(<-ch1)
+	fmt.Println("G1执行<-ch1完毕")
+	close(ch1)
+	fmt.Println("G1关闭ch1完毕")
+	defer func() {
+		fmt.Println("G1结束")
+	}()
+}
+
+```
 根据happens-before 规则，分析下这段代码执行流程这段代码使用的是无缓冲 channel（make(chan int) 没有指定容量），所以它的行为完全受 Go 内存模型 中关于 unbuffered channel 的 happens-before 规则支配。
 官方规则最关键的两条：
 
