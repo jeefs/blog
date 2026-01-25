@@ -111,7 +111,7 @@ func main() {
 ```
 
 - #### 协程执行时序图
-```
+```golang
 package main
 
 import "fmt"
