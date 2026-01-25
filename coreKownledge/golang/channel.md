@@ -111,30 +111,8 @@ func main() {
 ```
 
 - #### 协程执行时序图
-```golang
-package main
-
-import "fmt"
-
-func main() {
-    ch1 := make(chan int)           // 无缓冲 channel
-
-    go func() {                     // 新 goroutine G2 启动
-        ch1 <- 1                    // G2: 发送 1（阻塞等待接收者）
-        // 这一行只有在 main 完成 <-ch1 后才会继续执行
-        ch1 <- 2                    // G2: 发送 2（再次阻塞等待接收者）
-    }()                             // G2 现在运行到 ch1 <- 1 阻塞
-
-    fmt.Println(<-ch1)              // main: 接收（阻塞等待发送者）
-    // 这一行完成时，happens-before 保证：G2 的 ch1 <- 1 已完成
-    // 同时：G2 的 ch1 <- 1 之后的代码可以继续执行
-
-    close(ch1)                      // main: 关闭 channel
-    // main 结束，整个程序退出
-}
-```
 根据happens-before 规则，分析下这段代码执行流程这段代码使用的是无缓冲 channel（make(chan int) 没有指定容量），所以它的行为完全受 Go 内存模型 中关于 unbuffered channel 的 happens-before 规则支配。
-官方规则（来自 https://go.dev/ref/mem）最关键的两条：
+官方规则最关键的两条：
 
 A send on a channel happens before the corresponding receive from that channel completes.
 （发送操作发生在对应的接收完成之前）
@@ -143,6 +121,7 @@ A receive from an unbuffered channel happens before the send on that channel com
 
 这两条规则结合在一起，对无缓冲 channel 形成了严格的双向同步。
 代码执行流程（按 happens-before 顺序分析）
+```golang
 Gopackage main
 
 import "fmt"
@@ -163,6 +142,7 @@ func main() {
     close(ch1)                      // main: 关闭 channel
     // main 结束，整个程序退出
 }
+```
 详细的 happens-before 时序（最可能/规范的执行路径）
 
 main goroutine (G1) 创建 channel → 启动匿名 goroutine (G2)
