@@ -110,5 +110,62 @@ func main() {
 
 ```
 
-- #### 协程执行时序图
+#### 协程执行时序图
 在Happens-Before 规则的条件下，协程的执行结果可预测，但是执行顺序不可预测
+
+#### 利用channel实现生产者-消费者模式
+```golang
+package main
+
+import (
+	"fmt"
+	"sync"
+)
+
+/*
+1.缓存满时，生产者阻塞，等待消费者消费
+2.缓存空时，消费者阻塞，等待生产者写入
+3.不同消费者间互斥，不能同时操作资源
+4.消费者和生产者之间互斥，不能同时操作资源
+写入操作必须有排他性和原子性
+*/
+
+var queue chan int
+
+func main() {
+	var wg sync.WaitGroup
+	queue = make(chan int, 10)
+	wg.Add(1)
+	go producer(&wg)
+	for i := 1; i <= 3; i++ {
+		wg.Add(1)
+		go consumer(i, &wg)
+	}
+	wg.Wait()
+}
+
+func producer(wg *sync.WaitGroup) {
+	for i := range 50 {
+		queue <- i
+	}
+	close(queue)
+	wg.Done()
+}
+
+func consumer(i int, wg *sync.WaitGroup) {
+	// for v := range queue {
+	// 	fmt.Printf("消费内容为%d\n", v)
+	// }
+	for {
+		v, ok := <-queue
+		if !ok {
+			fmt.Printf("消费者%d内容为%d消费完毕,结束消费\n", i, v)
+			break
+		}
+		fmt.Printf("消费者%d消费内容为%d\n", i, v)
+
+	}
+	wg.Done()
+}
+
+```
