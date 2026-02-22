@@ -19,6 +19,7 @@
 - [nats实战](./codeNotes/nats-action.md)
 - [Git使用Personal access tokens拉取代码](./codeNotes/git-pat.md)
 - [vmware虚拟机使用宿主机代理](./codeNotes/vm-proxy.md)
+- [协程资源限制](./codeNotes/goroutine-mem-limit.md)
 
 ### go编程核心知识 
 - [map]
