@@ -149,15 +149,16 @@ func main() {
 }
 ```
 #### 代码基准测试法
+```golang
 func BenchmarkProcessData(b *testing.B) {
     for i := 0; i < b.N; i++ {
         // 调用你的业务函数
         yourBusinessLogic()
     }
 }
-
-#### 运行时监控法
 ```
+#### 运行时监控法
+```golang
 var m1, m2 runtime.MemStats
 runtime.ReadMemStats(&m1) // 记录执行前内存状态
 
