@@ -117,7 +117,7 @@
 - Golang
   - The Go Programing lanuage
   - Concurrency in Go
-  - 100 Go Mistakes and How to Afvoid Them
+  - 100 Go Mistakes and How to Avoid Them
 - 操作系统
   - Operating Systems:Three Easy Pieces
   - xv6手册
