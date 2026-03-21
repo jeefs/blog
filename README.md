@@ -113,3 +113,23 @@
   - 网络网络分层 
   - 构建计算机网络，搭建一个小型网络，包含路由转发 
   - 实现应用层网络程序或者抓包组包（２层）程序
+### 个人书单
+- Golang
+  - The Go Programing lanuage
+  - Concurrency in Go
+  - 100 Go Mistakes and How to Afvoid Them
+- 操作系统
+  - Operating Systems:Three Easy Pieces
+  - xv6手册
+  - CSAPP
+- 中间件
+  - Caching at Scale with Redis
+  - Redis in Action
+  - Kafka权威指南
+  - TIDB
+  - Vitess
+  - ShardingSphere
+- 数据库
+  - DDIA
+  - 高性能MySQL
+
