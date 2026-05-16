@@ -78,12 +78,6 @@
 - [kubernetes笔记04-pod](./codeNotes/k8s-pod.md)
 - [kubernetes笔记03-service](./codeNotes/k8s-service.md)
 
-### 读书笔记
-- [代码整洁之道]()todo
-- [敏捷软件开发]()todo
-- [Go专家编程]()todo
-- [SQL必知必会]()todo
-
 ### 源码阅读
 - [goredis]()todo
 - [robfig/cron]todo
